@@ -185,7 +185,7 @@ const App = () => {
       headers: myHeader,
     };
 
-    fetch('http://localhost:3001/wordleFormInput', fetchOptions)
+    fetch('/wordleFormInput', fetchOptions)
       .then(response => response.json())
       .then(data => {
 
