@@ -1,0 +1,758 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Caveat',
+    'Graduate', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #DBFCFE;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Wordle square responsive design */
+
+.wordleSquare {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  position: relative;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.answersWordleSquare {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  position: relative;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.wordleSquareAnswerTitle {
+  width: 7%;
+  padding-bottom: 7%;
+  font-size: 2vw;
+  position: relative;
+}
+
+.wordleSquareAnswerLetter {
+  width: max-content;
+  height: max-content;
+  margin-right: 2px;
+}
+
+@media only screen and (max-width: 450px) {
+
+  .answersWordleSquare {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+}
+
+/* @media only screen and (min-width: 1500px) {
+
+  .wordleSquareTitle {
+    width: 7%;
+    padding-bottom: 7%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+  .wordleSquareKnownValid {
+    width: 15%;
+    padding-bottom: 15%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+  .wordleSquareAbsent {
+    width: 7%;
+    padding-bottom: 7%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+} */
+
+/* @media only screen and (min-width: 1024px) and (max-width: 1499px) {
+
+  .wordleSquareTitle {
+    width: 10%;
+    padding-bottom: 10%;
+    font-size: 2.5vw;
+    position: relative;
+  }
+
+  .wordleSquareKnownValid {
+    width: 15%;
+    padding-bottom: 15%;
+    font-size: 2.2vw;
+    position: relative;
+  }
+
+  .wordleSquareAbsent {
+    width: 6%;
+    padding-bottom: 6%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+}  */
+
+/* @media only screen and (min-width: 850px) and (max-width: 1023px){
+
+  .wordleSquareTitle {
+    width: 7%;
+    padding-bottom: 7%;
+    font-size: 5vw;
+    position: relative;
+  }
+
+  .wordleSquareKnownValid {
+    width: 12%;
+    padding-bottom: 12%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+  .wordleSquareAbsent {
+    width: 12%;
+    padding-bottom: 12%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+} */
+
+/* @media only screen and (min-width: 640px) and (max-width: 849px){
+
+  .wordleSquareTitle {
+    width: 9%;
+    padding-bottom: 9%;
+    font-size: 5vw;
+    position: relative;
+  }
+
+  .wordleSquareKnownValid {
+    width: 12%;
+    padding-bottom: 12%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+  .wordleSquareAbsent {
+    width: 12%;
+    padding-bottom: 12%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+} */
+
+/* @media only screen and (min-width: 500px) and (max-width: 639px){
+
+   .wordleSquareTitle {
+    width: 10%;
+    padding-bottom: 10%;
+    font-size: 6vw;
+    position: relative;
+  }
+
+  .wordleSquareKnownValid {
+    width: 12%;
+    padding-bottom: 12%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+  .wordleSquareAbsent {
+    width: 12%;
+    padding-bottom: 12%;
+    font-size: 2vw;
+    position: relative;
+  }
+
+} */
+
+/* Main layout flex design */
+
+.mainLayout {
+  padding-bottom: 25px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  align-items: center;
+}
+
+@media (max-width: 610px) {
+  .mainLayout {
+    width: 450px;
+  }
+  .answersLayout {
+    width: 394px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .answersLayout {
+    width: 640px !important;
+    max-width: 640px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .mainLayout {
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .columnLayout {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .answersLayout {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 100% !important;
+    min-width: 320px !important;
+  }
+
+  .mainBorder {
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0px !important;
+  }
+
+  .columnBorder {
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0px !important;
+  }
+
+  .keyboardBorder {
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0px !important;
+  }
+
+  .answerContainerBorder {
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0px !important;
+  }
+}
+
+.mainContentLayout {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1280px) {
+  .mainContentLayout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.columnLayout {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/* Answers and input div styling */
+
+.answersLayout {
+  width: 500px;
+  max-width: 500px;
+  min-height: 680px;
+}
+
+.answersTitleGridItem {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+}
+
+.answersHolder {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.answerFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+}
+
+.answerFlexBox:hover {
+  background-color: #6ca965;
+}
+
+.answerFlexBox:hover .answerFont{
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .answersLayout {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+
+  .answersHolder {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Site Background Styling */
+
+.siteBackground {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  padding-bottom: 25px;
+}
+
+/* Borders */
+
+.titleBorder {
+  border-style: solid;
+  border-width: 0px 0px 3px 0px;
+  border-color: rgb(128, 128, 128);
+}
+
+.mainBorder {
+  border-style: solid;
+  border-color: rgb(128, 128, 128);
+  border-width: 3px;
+  border-radius: 5px;
+}
+
+.columnBorder {
+  border-style: solid;
+  border-color: rgb(128, 128, 128);
+  border-width: 3px 3px 0px 3px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.dividerVertical {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(202, 183, 183);
+  background-color: rgb(202, 183, 183);
+  height: 260px;
+  margin-top: auto;
+  
+}
+
+.dividerHorizontal {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(202, 183, 183);
+  background-color: rgb(202, 183, 183);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputBorder {
+  border-style: double;
+  border-color: rgb(128, 128, 128);
+  border-width: 3px;
+  border-radius: 5px;
+  
+}
+
+.keyboardBorder {
+  border-style: solid;
+  border-color: rgb(128, 128, 128);
+  border-width: 3px;
+  border-radius: 0px 0px 5px 5px;
+  border-width: 0px 3px 3px 3px;
+}
+
+.answerContainerBorder {
+  border-style: solid;
+  border-color: rgb(128, 128, 128);
+  border-width: 3px;
+  border-radius: 5px;
+}
+
+.answerBorder {
+  border-style: solid;
+  border-color: rgb(128, 128, 128);
+  border-width: 2px;
+  border-radius: 5px;
+
+}
+
+.palmTreeBorder {
+  height: 200px;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  border: solid;
+  border-width: 5px;
+  border-radius: 100px;
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/* Keyboard buttons */
+
+.keyboardButton {
+  width: 45px;
+  height: 55px;
+  padding-bottom: 2px;
+  text-align: center;
+  margin-top: 20px;
+  justify-self: center;
+}
+
+.unselectedUnusedLetter {
+  background-color: white;
+  color: rgb(51, 50, 50);
+  border: solid;
+  border-width: 2px;
+  border-bottom-width: 0px;
+  border-color: #999;
+  border-radius: 11px;
+  box-shadow: 0 7px #999;
+}
+
+.selectedUnusedLetter {
+  --tw-bg-opacity: 1;
+  background-color: #999;
+  color: white;
+  border: solid;
+  border-width: 2px;
+  border-radius: 11px;
+  border-color: #666;
+  box-shadow: 0 3px #666;
+  transform: translateY(5px);
+}
+
+.knownSelectedUnusedLetter.knownSelectedUnusedLetter {
+  --tw-bg-opacity: 1;
+  background-color: #6ca965;
+  color: white;
+  border: solid;
+  border-width: 2px;
+  border-radius: 11px;
+  border-color: #666;
+  box-shadow: 0 3px #666;
+  transform: translateY(5px);
+}
+
+.validSelectedUnusedLetter {
+  --tw-bg-opacity: 1;
+  background-color: #c8b653;
+  color: white;
+  border: solid;
+  border-width: 2px;
+  border-radius: 11px;
+  border-color: #666;
+  box-shadow: 0 3px #666;
+  transform: translateY(5px);
+}
+
+/* Font */
+
+.wordleBlockFont {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  font-weight: 700;
+  font-family: "Caveat";
+}
+
+.inputText {
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  caret-color: transparent;
+  outline-color: rgb(167, 214, 161);
+}
+
+.unusedLetterFont {
+  font-size: 30px;
+  --tw-text-opacity: 1;
+  color: black;
+  font-weight: 800;
+}
+
+.keyboardLetterFont {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.infoFont {
+  font-family: "Graduate";
+  margin-top: 15px;
+}
+
+.caveatFont {
+  font-family: "Caveat";
+}
+
+.answerFont {
+  font-size: 20px;
+  --tw-text-opacity: 1;
+  font-weight: 700;
+}
+
+
+
+/* Box Shadow */
+
+.wordleBlockBoxShadowGreen {
+  box-shadow: 4px 4px rgb(128, 197, 120);
+}
+
+.wordleBlockBoxShadowYellow {
+  box-shadow: 4px 4px rgb(219, 207, 136);
+}
+
+.wordleBlockBoxShadowGrey {
+  box-shadow: 4px 4px rgb(161, 163, 165);
+}
+
+/* Input Styling */
+
+.inputSquare {
+  text-align: center;
+  padding-bottom: 5px;
+  width: 45px;
+  height: 55px;
+}
+
+.inputSquare:invalid {
+  color: black;
+  background-color: white;
+}
+
+.knownInput:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  border-style: solid;
+  outline-color:#6ca965;
+  border-color: #6ca965;
+  background-color: rgb(213, 241, 220);
+}
+
+.validInput:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  border-style: solid;
+  outline-color: #c8b653;
+  border-color: #c8b653;
+  background-color: rgb(228, 233, 200);
+}
+
+.knownInput:valid {
+  color: white;
+  background-color: rgb(108 169 101 / var(--tw-bg-opacity));
+}
+
+.validInput:valid {
+  color: white;
+  background-color: rgb(200 182 83 / var(--tw-bg-opacity));
+}
+
+/* Button styling */
+
+.clearAllButton{
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  background-color: #f5a4a8;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 9px #999;
+  margin-top: 50px;
+}
+
+.clearAllButton:active {
+  background-color: #ffbcbf;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.submitButton{
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  background-color: #dba4f5;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 9px #999;
+  margin-top: 50px;
+}
+
+.submitButton:active {
+  background-color: #dac7e9;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.clearButton {
+  border-radius: 10px;
+  width: 125px;
+  height: 40px;
+  font-size: 22px;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 5px #999;
+  padding-bottom: 2px;
+  margin-top: 20px;
+}
+
+.clearButton:active {
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+.knownClear:active {
+  background-color: #79c271;
+}
+
+.validClear:active {
+  background-color: #e0cc5b;
+}
+
+.keyboardClear:active {
+  background-color: #838282;
+}
+
+.buttonBox {
+  place-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .submitButton {
+    width: 150px;
+    height: 40px;
+    font-size: 22px;
+    box-shadow: 0 5px #999;
+  }
+
+  .submitButton:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
+
+  .clearAllButton {
+    width: 150px;
+    height: 40px;
+    font-size: 22px;
+    box-shadow: 0 5px #999;
+  }
+
+  .clearAllButton:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  .submitButton {
+    width: 125px;
+    height: 40px;
+    font-size: 22px;
+    box-shadow: 0 5px #999;
+  }
+
+  .clearAllButton {
+    width: 125px;
+    height: 40px;
+    font-size: 22px;
+    box-shadow: 0 5px #999;
+  }
+
+  .buttonBox {
+    place-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .buttonBox {
+    place-content: space-between;
+  }
+}
+
+/* Title Column Styling */
+
+.leftTitleItem {
+  /* Flex settings for left title */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.rightTitleItem {
+  /* Flex settings for left title */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.mainBodyTitleGridItem {
+  /* Flex settings for main body titles */
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+}
+
+/* Animations */
+
+@keyframes spin {
+  from {
+      transform: scale(0.5) rotate(0deg);
+  }
+  to {
+      transform: scale(1) rotate(360deg);
+  }
+}
